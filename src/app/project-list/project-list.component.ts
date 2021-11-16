@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { projects } from '../models/mocks/projects.mocks';
+import { Project } from '../models/project.model';
 
 @Component({
   selector: 'app-project-list',
@@ -7,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectListComponent implements OnInit {
 
+  projects : Project[]=projects;
+  searchText:string;
   constructor() { }
 
   ngOnInit(): void {

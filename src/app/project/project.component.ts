@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Project } from '../models/project.model';
 
 @Component({
@@ -8,11 +8,14 @@ import { Project } from '../models/project.model';
 })
 export class ProjectComponent implements OnInit {
 
-
-  project : Project = new Project(3,'Şehir hastaneleri', 'Otomasyon Sistemi', undefined, 1);
+  @Input('currentProject') project : Project
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getIncompletedTaskCount(){
+    return this.project.tasks?.filter(t=>!t.isDone).length;
   }
 
 }

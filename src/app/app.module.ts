@@ -9,6 +9,8 @@ import { ProjectComponent } from './project/project.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
+import { ProjectSearchPipe } from './pipes/project-search.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { HeaderMenuComponent } from './header-menu/header-menu.component';
     ProjectComponent,
     TaskListComponent,
     UserListComponent,
-    HeaderMenuComponent
+    HeaderMenuComponent,
+    ProjectSearchPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

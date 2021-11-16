@@ -1,6 +1,6 @@
-import { Category } from "../category.model"
+import { Category } from "../category.model";
 
 export const categories: Category[]=[
     new Category(1,"Sağlık Bakanlığı"),
-    new Category(2,"Telekominasyon")
+    new Category(2,"Telekominikasyon")
 ]

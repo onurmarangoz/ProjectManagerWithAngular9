@@ -1,2 +1,19 @@
-<p>project-list works!</p>
-<app-project></app-project>
+<div class="container" *ngIf="projects; else noProject ">
+   <div class="row m-2">
+       <div class="col-12">
+           <input type="text" placeholder="aranacak proje" class="form-control" [(ngModel)]="searchText">
+       </div>
+   </div>
+   <div class="row m-1" *ngFor="let project of projects | projectSearch : searchText ">
+       <div class="col-12" *ngIf="project!=null; else noProject" >
+
+          <app-project [currentProject]="project"></app-project>
+       </div>
+   </div>
+</div>
+
+<ng-template #noProject>
+   <div class="alert alert-danger">
+       Proje bulunamadı!
+   </div>
+</ng-template>
