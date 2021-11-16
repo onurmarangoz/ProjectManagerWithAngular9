@@ -17,13 +17,7 @@ export class CategoryMenuComponent implements OnInit {
 
   ngOnInit(): void {
     this.categoryService.getCategories()
-          .subscribe((data:Category[]) => this.categories = data)
+                        .subscribe((data:Category[])=>this.categories=data)
   }
 
 }
-
-
-
-
-
-

@@ -1,4 +1,4 @@
-<div class="container" *ngIf="projects; else noProject ">
+<div class="container" *ngIf="projectCount>0; else noProject ">
    <div class="row m-2">
        <div class="col-12">
            <input type="text" placeholder="aranacak proje" class="form-control" [(ngModel)]="searchText">

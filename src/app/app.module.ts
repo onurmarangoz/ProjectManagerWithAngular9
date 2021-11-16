@@ -11,7 +11,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { ProjectSearchPipe } from './pipes/project-search.pipe';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [

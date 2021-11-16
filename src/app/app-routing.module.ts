@@ -5,8 +5,9 @@ import { ProjectListComponent } from './project-list/project-list.component';
 
 const routes: Routes = [
   {path:'',component:ProjectListComponent},
-  {path:'categories',component:CategoryMenuComponent},
-  {path: 'projeler', component:ProjectListComponent}
+  {path:'categories', component:CategoryMenuComponent},
+  {path:'projeler',component:ProjectListComponent},
+  {path:'projects/category/:id', component:ProjectListComponent}
 ];
 
 @NgModule({
