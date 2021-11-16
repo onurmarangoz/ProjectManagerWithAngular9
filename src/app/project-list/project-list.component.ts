@@ -11,19 +11,29 @@ import { ProjectService } from '../services/project.service';
 })
 export class ProjectListComponent implements OnInit {
 
-  projects : Project[]=projects;
-  searchText:string;
-  projectCount:number = 0;
-  constructor(private projectService: ProjectService, private activateRoute:ActivatedRoute) { }
+  projects: Project[];
+  searchText: string;
+  projectCount: number = 0;
+  constructor(private projectService: ProjectService, private activateRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activateRoute.params.subscribe(pa => {
-        pa["id"] != undefined ? this.projectService.getProjectsByCategory(pa["id"]).subscribe((data:Project[]) => this.projects = data)
-        : 
-        this.projectService.getProjects().subscribe((data:Project[]) => this.projects = data);
-        this.projectCount = this.projects?.length;
-    } );
-    console.log(projects.length);
+      pa["id"] != undefined ?
+        this.projectService.getProjectsByCategory(pa["id"]).subscribe((data: Project[]) => {
+          this.projects = data;
+          this.projectCount = this.projects?.length
+        })
+        :
+        this.projectService.getProjects().subscribe((data: Project[]) =>{ 
+          this.projects = data; 
+          this.projectCount = this.projects?.length
+        });
+      //this.projectCount = this.projects?.length;
+
+    });
+
+
+
   }
 
 }
