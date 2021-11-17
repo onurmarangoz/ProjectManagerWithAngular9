@@ -18,12 +18,12 @@ export class ProjectService {
   }
 
   addProject(project:Project):Observable<Project>{
-   // let option = {
-   //   headers: new HttpHeaders({
-   //     'Content-Type':'application/json', 
-   //     'authorization':'Bearer [JWT TOKEN]'
-   //   })
-   // }
+    // let option = {
+    //   headers: new HttpHeaders({
+    //     'Content-Type':'application/json',
+    //     'Authorization':'Bearer [JWT TOKEN]'  
+    //   })
+    // };
 
     return this.http.post("https://localhost:44387/api/Projects",project);
   }

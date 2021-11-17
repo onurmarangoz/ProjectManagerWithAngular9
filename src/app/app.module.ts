@@ -10,10 +10,11 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { ProjectSearchPipe } from './pipes/project-search.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AddCategoryComponent } from './add-category/add-category.component';
-import { AddProjectComponent } from './add-project/add-project.component'
+import { AddProjectComponent } from './add-project/add-project.component';
+import { LoginComponent } from './login/login.component'
 
 @NgModule({
   declarations: [
@@ -26,13 +27,15 @@ import { AddProjectComponent } from './add-project/add-project.component'
     HeaderMenuComponent,
     ProjectSearchPipe,
     AddCategoryComponent,
-    AddProjectComponent
+    AddProjectComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

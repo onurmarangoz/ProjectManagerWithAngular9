@@ -1,0 +1,13 @@
+<h4>Giriş Yap</h4>
+<form (ngSubmit)="login()">
+    <div>
+        <label for="" class="form-label">Kullanıcı Adı</label>
+        <input type="text" name="username" class="form-control" [(ngModel)]="userName">
+    </div>
+
+    <div>
+        <label for="" class="form-label">Kullanıcı Adı</label>
+        <input type="password" name="password" [(ngModel)]="password" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-warning">Giriş Yap</button>
+</form>

@@ -17,4 +17,8 @@ export class CategoryService {
                         );
                          
   }
+
+  addNewCategory(category:Category):Observable<Category>{
+    return this.httpClient.post("https://localhost:44387/api/Categories", category);
+  }
 }
