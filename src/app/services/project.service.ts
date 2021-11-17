@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Project } from '../models/project.model';
@@ -15,5 +15,16 @@ export class ProjectService {
   }
   getProjectsByCategory(id:number): Observable<Project[]> {
     return this.http.get<Project[]>("https://localhost:44387/api/Projects/"+id);
+  }
+
+  addProject(project:Project):Observable<Project>{
+   // let option = {
+   //   headers: new HttpHeaders({
+   //     'Content-Type':'application/json', 
+   //     'authorization':'Bearer [JWT TOKEN]'
+   //   })
+   // }
+
+    return this.http.post("https://localhost:44387/api/Projects",project);
   }
 }

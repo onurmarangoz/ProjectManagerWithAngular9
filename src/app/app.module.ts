@@ -11,7 +11,9 @@ import { UserListComponent } from './user-list/user-list.component';
 import { HeaderMenuComponent } from './header-menu/header-menu.component';
 import { ProjectSearchPipe } from './pipes/project-search.pipe';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { AddCategoryComponent } from './add-category/add-category.component';
+import { AddProjectComponent } from './add-project/add-project.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { HttpClientModule } from '@angular/common/http'
     TaskListComponent,
     UserListComponent,
     HeaderMenuComponent,
-    ProjectSearchPipe
+    ProjectSearchPipe,
+    AddCategoryComponent,
+    AddProjectComponent
   ],
   imports: [
     BrowserModule,

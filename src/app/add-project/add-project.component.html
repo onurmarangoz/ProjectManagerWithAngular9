@@ -1,0 +1,21 @@
+<form #addNewProject="ngForm" (ngSubmit)="addProjectWithValidation(addNewProject)">
+    <div class="m-2">
+        <label for="projectName" class="form-label">Proje Adı</label>
+        <input type="text" #projectName="ngModel" name="name" id="projectName" required [(ngModel)]="project.name" class="form-control">
+        <span class="alert alert-danger" *ngIf="projectName.invalid && projectName.dirty">Burada Validasyon olacak!</span>
+    </div>
+    <div class="m-2">
+        <label for="description" class="form-label">Proje Açıklaması</label>
+        <input type="text" #description="ngModel" name="description" id="description" required [(ngModel)]="project.description" class="form-control">
+        <span class="alert alert-danger" *ngIf="description.invalid && description.dirty">Burada Validasyon olacak!</span>
+    </div>
+    <div class="m-2">
+        <label for="categortyId" class="form-label">Proje Kategorisi</label>
+        <select class="form-control" #categoryId="ngModel" name="categortyId" id="categortyId" [(ngModel)]="project.categoryId" required>
+            <option value="">Seçiniz</option>
+            <option value=" {{ category.id }} " *ngFor="let category of categories"> {{ category.name }} </option>
+        </select>
+        <span class="alert alert-danger" *ngIf="categoryId.invalid && categoryId.untouched">Burada Validasyon olacak!</span>
+    </div>
+    <button type="submit" class="btn btn-danger">Proje Ekle</button>
+</form>
