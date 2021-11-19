@@ -17,7 +17,7 @@ export class HeaderMenuComponent implements OnInit {
   logout(event: Event){
     event.preventDefault();
     this.userService.logout();
-    this.router.navigate([""]);
+    this.router.navigate(["login"]);
   }
 
 }
